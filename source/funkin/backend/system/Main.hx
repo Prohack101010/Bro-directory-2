@@ -79,7 +79,8 @@ class Main extends Sprite
 		CrashHandler.init();
 
 		#if android
-		Sys.setCwd(#if (android)Path.addTrailingSlash(#end SUtil.getStorageDirectory()#if (android))#end);
+		Sys.setCwd(Path.addTrailingSlash(Context.getExternalFilesDir()));
+		Application.current.window.alert("We detected that Codename Engine is running on Android target, expect things to crash & unstable.", "Warning");
 		#end
 
 		addChild(game = new FunkinGame(gameWidth, gameHeight, MainState, Options.framerate, Options.framerate, skipSplash, startFullscreen));
