@@ -27,6 +27,8 @@ import lime.app.Application;
 import funkin.backend.system.modules.*;
 #if android
 import haxe.io.Path;
+import sys.FileSystem;
+import sys.io.File;
 #end
 
 #if ALLOW_MULTITHREADING
@@ -76,7 +78,7 @@ class Main extends Sprite
 
 		CrashHandler.init();
 
-		#if mobile
+		#if android
 		Sys.setCwd(#if (android)Path.addTrailingSlash(#end SUtil.getStorageDirectory()#if (android))#end);
 		#end
 
