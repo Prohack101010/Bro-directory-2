@@ -13,6 +13,12 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.graphics.FlxGraphic;
 
+#if android
+import haxe.io.Path;
+import sys.FileSystem;
+import sys.io.File;
+#end
+
 using StringTools;
 
 class Paths
