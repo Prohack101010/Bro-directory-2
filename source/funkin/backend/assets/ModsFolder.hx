@@ -17,6 +17,12 @@ import openfl.text.Font as OpenFLFont;
 import sys.FileSystem;
 #end
 
+#if android
+import haxe.io.Path;
+import sys.FileSystem;
+import sys.io.File;
+#end
+
 import flixel.FlxState;
 import haxe.io.Path;
 
